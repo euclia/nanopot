@@ -1,0 +1,17 @@
+#!/bin/bash
+
+version="9.1.0"
+ 
+# create lib directory 
+mkdir -p lib/ChemDoodleWeb
+cd lib
+ 
+# download and extract library 
+wget "https://web.chemdoodle.com/downloads/ChemDoodleWeb-${version}.zip"
+unzip "ChemDoodleWeb-${version}.zip"
+ 
+mv "ChemDoodleWeb-${version}"/*.txt "ChemDoodleWeb-${version}"/install/* ChemDoodleWeb
+ 
+# clean up 
+rm "ChemDoodleWeb-${version}.zip"
+rm -rf "ChemDoodleWeb-${version}"

@@ -1,0 +1,26 @@
+.toolbar{
+    box-shadow: 0px 2px 8px black;
+    height: 54px;
+    max-height: 54px;
+    min-height: 54px;
+    position: sticky;
+    z-index: 2;
+}
+
+.login-card {
+    opacity: 0.8;
+    position: absolute;
+    max-width: 18%;
+    // max-height: 14%;
+    min-height: 14%;
+    margin-left: 68%;
+    margin-top: 10%;
+}
+
+.landing-image{
+    width: 60%;
+    height: 64vh;
+    z-index: -1;
+    margin-top: 16em;
+    margin-left: 2em;
+}

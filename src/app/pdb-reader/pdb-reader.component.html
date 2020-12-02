@@ -1,0 +1,2 @@
+<input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="pdbInputChange($event)" accept=".pdb"/>
+<button mat-flat-button color="primary" (click)="csvInput.click()">Choose pdb File (.pdb)</button>
