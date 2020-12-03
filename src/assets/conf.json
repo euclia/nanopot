@@ -1,8 +1,8 @@
 {
     "__nanopotApi": "http://localhost:8006",
     "nanopotApi": "https://nanopotapi.jaqpot.org",
-    "__stsServer": "https://login.jaqpot.org/auth/realms/jaqpot",
-    "stsServer": "https://login.cloud.nanosolveit.eu/auth/realms/nanosolveit",
+    "stsServer": "https://login.jaqpot.org/auth/realms/jaqpot",
+    "__stsServer": "https://login.cloud.nanosolveit.eu/auth/realms/nanosolveit",
     "redirect_url" : "http://localhost:4200/",
     "__redirect_url" : "https://accounts.jaqpot.org",
     "client_id":"nanopot",

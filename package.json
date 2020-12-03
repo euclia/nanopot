@@ -26,6 +26,7 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@euclia/jaqpot-client": "^1.0.0",
     "@euclia/pdb-to-json": "^1.0.26",
     "@wcmc/ng-chemdoodle": "^0.1.0",
     "angular-auth-oidc-client": "^11.2.1",

@@ -15,11 +15,13 @@ import { AuthModule, OidcSecurityService, OidcConfigService, LogLevel, } from 'a
 import { PdbReaderComponent } from './pdb-reader/pdb-reader.component';
 import { GeomDescriptors, PdbsonImplementation } from '@euclia/pdb-to-json';
 import { NgChemdoodleModule } from '@wcmc/ng-chemdoodle';
+import { ModelsComponent } from './models/models.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PdbReaderComponent
+    PdbReaderComponent,
+    ModelsComponent
   ],
   imports: [
     NgChemdoodleModule,
@@ -52,8 +54,9 @@ export function configureAuth(oidcConfigService: OidcConfigService, httpClient: 
         // Config.AccountsApi = customConfig.accountsApi
         // console.log("Accounts api at:")
         // console.log(Config.AccountsApi)
+        // console.log(customConfig.stsServer)
           return {
-              stsServer: customConfig.stsServer,
+              stsServer: customConfig.stsServer,              
               redirectUrl: customConfig.redirect_url,
               clientId: customConfig.client_id,
               responseType: customConfig.response_type,
