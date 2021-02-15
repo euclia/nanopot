@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IJaqpotClient, JaqpotClientFactory } from '@euclia/jaqpot-client'
-import { Models } from '@euclia/jaqpot-client/dist/models/jaqpot.models';
+import { Model, Models, Prediction } from '@euclia/jaqpot-client/dist/models/jaqpot.models';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
 import { Config } from '../config/config';
 import { from, Observable } from 'rxjs'
@@ -27,6 +27,16 @@ export class JaqpotService {
   public getMyModels(min:Number, max:Number):Observable<Models>{
     let token = this.oidcSecurityService.getToken()
     return from(this._jaqpotClient.getMyModels(token, min, max))
+  }
+
+  public getModelById(id:string):Observable<Model>{
+    let token = this.oidcSecurityService.getToken()
+    return from(this._jaqpotClient.getModelById(id, token))
+  }
+
+  public predict(modelid:string, input:{ [key: string]: any; }[]):Observable<Prediction>{
+    let token = this.oidcSecurityService.getToken()
+    return from(this._jaqpotClient.predict(modelid, input, token))
   }
 
 }

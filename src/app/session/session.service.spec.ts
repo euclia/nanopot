@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { GeomsApiService } from './geoms.api.service';
 
+import { SessionService } from './session.service';
 
-describe('Geoms.ApiService', () => {
-  let service: GeomsApiService 
+describe('SessionService', () => {
+  let service: SessionService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GeomsApiService);
+    service = TestBed.inject(SessionService);
   });
 
   it('should be created', () => {

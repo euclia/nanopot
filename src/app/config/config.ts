@@ -4,6 +4,7 @@ export let Config = {
      // 'JaqpotBase': 'http://localhost:8080/jaqpot/services',
      // 'JaqpotBase': 'https://api-jaqpot.prod.openrisknet.org/jaqpot/services',
      "AccountsApi":"https://accountsapi.jaqpot.org",
-     "GeomApi":"https://geomdescapi.jaqpot.org"
+     "__GeomApi":"https://geomdescapi.jaqpot.org",
+     "GeomApi":"https://geomdescapi.cloud.nanosolveit.eu"
  };
  

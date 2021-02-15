@@ -1,1 +1,22 @@
-<p>models works!</p>
+<div class="model_list"> 
+    <div *ngFor="let model of _models;"> 
+        <mat-card *ngIf="model" class="model_card">
+            <mat-card-title>Model</mat-card-title>
+            <mat-card-subtitle>{{model.meta.titles[0]}}</mat-card-subtitle>
+            <mat-card-content>
+                {{model.meta.descriptions[0]}}
+               
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button 
+                        matTooltip="Use this model" 
+                        class="use_b"
+                        (click)="useModel(model)">USE</button>
+              </mat-card-actions>
+        </mat-card>
+    </div>
+
+</div>
+
+<mat-divider vertical ></mat-divider>
+

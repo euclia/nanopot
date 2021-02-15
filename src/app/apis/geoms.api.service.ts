@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { GeomDescriptorsFactory, IGeomDescriptors } from '@euclia/pdb-to-json/dist/client';
-import { Descriptors, Pdb } from '@euclia/pdb-to-json/dist/models/pdbtojson';
+import { GeomDescriptorsFactory, IGeomDescriptors } from '@euclia/descriptors/dist/client';
+import { Descriptors, Pdb } from '@euclia/descriptors/dist/models/pdbtojson';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
+import { from, Observable } from 'rxjs';
 import { Config } from '../config/config';
 
 @Injectable({

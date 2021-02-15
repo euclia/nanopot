@@ -1,0 +1,21 @@
+
+<div *ngIf="_modelAvailable" class="pred">
+    <div *ngIf="calculatingDescr">
+        <h4>Calculating descriptors</h4>
+        <mat-spinner></mat-spinner>
+    </div>
+    <div  *ngIf="calculatedDescr">
+        <h4>Calculated descriptors, proceeding prediction</h4>
+    </div>
+    <div *ngIf="calcPrediction">
+        <h4>Model predictions</h4>
+        <mat-spinner>
+        </mat-spinner>
+    </div>
+
+    <div *ngIf="prediction" >
+        <div *ngFor="let pred of prediction.predictions[0] | keyvalue">
+            <h3>{{pred.key}}</h3> <p>{{pred.value}}</p>
+        </div>
+    </div>
+</div>

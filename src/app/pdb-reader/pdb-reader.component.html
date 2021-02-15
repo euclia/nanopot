@@ -1,2 +1,16 @@
-<input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="pdbInputChange($event)" accept=".pdb"/>
-<button mat-flat-button color="primary" (click)="csvInput.click()">Choose pdb File (.pdb)</button>
+
+
+
+<div *ngIf="modelAvailable" class="input_pdb">
+    <h3> Insert pdb file to get predictions </h3>
+    <div>
+        <input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="pdbInputChange($event)" accept=".pdb, .cif"/>
+        <button mat-flat-button color="primary" (click)="csvInput.click()" class="pdb_b">Choose pdb File (.pdb)</button>
+    </div>
+
+    <div *ngIf="molecule" >
+        <canvas class="ChemDoodleWebComponent" id="chem_canvas" ></canvas>        
+    </div>
+    
+</div>
+

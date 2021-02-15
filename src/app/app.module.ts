@@ -3,6 +3,7 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,18 +14,25 @@ import { HttpClient } from '@angular/common/http';
 import { map, switchMap } from 'rxjs/operators';
 import { AuthModule, OidcSecurityService, OidcConfigService, LogLevel, } from 'angular-auth-oidc-client';
 import { PdbReaderComponent } from './pdb-reader/pdb-reader.component';
-import { GeomDescriptors, PdbsonImplementation } from '@euclia/pdb-to-json';
+import { GeomDescriptors, PdbsonImplementation } from '@euclia/descriptors';
 import { NgChemdoodleModule } from '@wcmc/ng-chemdoodle';
 import { ModelsComponent } from './models/models.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { PredictionsComponent } from './predictions/predictions.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
     AppComponent,
     PdbReaderComponent,
-    ModelsComponent
+    ModelsComponent,
+    PredictionsComponent
   ],
   imports: [
     NgChemdoodleModule,
+    MatDividerModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
@@ -69,7 +77,7 @@ export function configureAuth(oidcConfigService: OidcConfigService, httpClient: 
               // postLoginRoute: customConfig.baseurl,
               // forbiddenRoute: customConfig.baseurl,
               // unauthorizedRoute: customConfig.baseurl,
-              logLevel: LogLevel.Error, // LogLevel.Debug,
+              logLevel: LogLevel.Debug, // LogLevel.Debug,
               maxIdTokenIatOffsetAllowedInSeconds: 120,
               historyCleanupOff: true,
               autoUserinfo: true,

@@ -8,17 +8,18 @@
 
   <app-pdb-reader></app-pdb-reader>
 
+  <app-predictions></app-predictions>
 
-  <button mat-button color="accent" class="login-button" (click)="checkChem()">chem</button>
+  
+  <!-- <button mat-button color="accent" class="login-button" (click)="checkChem()">chem</button>
   <div style="width: 400px; height: 400px">
     <div [libChemdoodle]="molData" id="uniqueId"></div>
   </div>
 
-
   <input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="pdbInputChange($event)" accept=".cif, .pdb"/>
   <button mat-flat-button color="primary" (click)="csvInput.click()">Choose File (.pdb)</button>  
   <canvas class="ChemDoodleWebComponent" id="component15932" >
-  </canvas>
+  </canvas> -->
 
 
   <router-outlet></router-outlet>
@@ -27,7 +28,7 @@
 <ng-template #isNonAuthenticated>
   <mat-card class="login-card">
     <mat-card-header>
-      <mat-card-title>Wellcome</mat-card-title>
+      <mat-card-title>Welcome</mat-card-title>
       <mat-card-subtitle>To NanoPots</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
